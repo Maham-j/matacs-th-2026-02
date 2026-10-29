@@ -2,19 +2,19 @@
 
 **Candidate:** Maham Jamil  
 **Reference:** MATACS-TH-2026-02  
-**Time spent:** 1 and half day.
+**Time spent:** 1.5 days
 
 ## Overview
-This repository describes a proposed AI-assisted workflow for reviewing contractor proposals. AI extracts facts from proposal text; deterministic rules check mandatory requirements and calculate weighted scores. A human reviewer resolves warnings and makes the final award decision.
+This is a design for an AI-assisted process to review contractor proposals. AI extracts information from each proposal. Fixed rules check the mandatory requirements and calculate the weighted scores. A human reviewer checks warnings and makes the final decision.
 
 ## Files
 - [Process flow diagram](diagram/process-flow.png)
 - [Design write-up](WRITEUP.md)
 - [AI extraction prompt](PROMPTS.md)
-- [Expected proposal ranking](ranking.json)
+- [Proposal ranking and review flags](ranking.json)
 
-## How AI tools were used
-I used ChatGPT to help organize the design, draft the explanation and prompt, and check the ranking logic. I reviewed the proposed decisions rather than accepting them automatically. For example, I kept Proposal B as **flagged** rather than automatically declaring it ineligible: the proposal does not confirm that the bidder itself holds the required licence, so a reviewer must resolve the evidence before a final eligibility decision. I also excluded the instruction embedded in Proposal C that tried to influence automated ranking; proposal content is treated as untrusted data, not as system instructions.
+## How I used AI tools
+I used ChatGPT to help organize the design, draft parts of the write-up and extraction prompt, and check the scoring calculations. I reviewed the results instead of accepting them automatically. For example, Proposal B is flagged rather than immediately rejected because the proposal does not confirm that the bidder itself holds the required licence. A reviewer needs to resolve that point. I also ignored the instruction inside Proposal C that tried to influence the ranking. Proposal text is treated as data, not as instructions to the system.
 
 ## Scope and assumptions
-This is a design exercise, not a deployed application. The scoring formulas are explicit design assumptions because the brief provides weights but not exact normalization formulas. Missing evidence is not guessed. Proposals with unresolved mandatory evidence or a missing weighted input are flagged and are not given a final rank until reviewed.
+This is a design exercise, not a working application. The brief gives the scoring weights but not the exact formulas, so the normalization formulas are stated assumptions. Missing information is not guessed. A proposal with unresolved mandatory evidence or a missing score input is flagged for review rather than given a final rank.
