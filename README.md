@@ -8,7 +8,8 @@
 This is a design for an AI-assisted process to review contractor proposals. AI extracts information from each proposal. Fixed rules check the mandatory requirements and calculate the weighted scores. A human reviewer checks warnings and makes the final decision.
 
 ## Files
-- [Process flow diagram](diagram/process-flow.png)
+- [Simple process flow diagram](diagram/process-flow.md)
+- [Original process flow image](diagram/process-flow.png)
 - [Design write-up](WRITEUP.md)
 - [AI extraction prompt](PROMPTS.md)
 - [Proposal ranking and review flags](ranking.json)
