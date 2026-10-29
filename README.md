@@ -2,7 +2,7 @@
 
 **Candidate:** Maham Jamil  
 **Reference:** MATACS-TH-2026-02  
-**Time spent:** Update this line with your actual total time before submission.
+**Time spent:** 1 and half day.
 
 ## Overview
 This repository describes a proposed AI-assisted workflow for reviewing contractor proposals. AI extracts facts from proposal text; deterministic rules check mandatory requirements and calculate weighted scores. A human reviewer resolves warnings and makes the final award decision.
