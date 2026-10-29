@@ -1,1 +1,1 @@
-The required process-flow image is process-flow.png.
+The required process-flow image is process-flow.svg.
